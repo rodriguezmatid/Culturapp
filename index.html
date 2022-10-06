@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culturapp</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src = "https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />   
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <!--<style>
+        #map{
+            width: 100vw;
+            height: 500px;
+        }
+    </style>-->
+    
+</head>
+<body class="bg-[#FBE30A] items-center justify-center flex">
+    <div class="max-w-md">
+        <!-- Buscador -->
+        <nav
+            role="navigation"
+            class="bg-white flex justify-self-auto items-center h-16 text-white relative">
+            <img src="./images/Grupo 2.png" alt="">
+            <img src="./images/Grupo 3.png" alt="">
+        </nav>
+        <div class="box-border bg-[#FBE30A]">
+        </div>
+        <!-- Tags -->
+        <div class="bg-white justify-between rounded-full mt-5 ml-5 mr-5 pl-3 pr-3">
+            <input type="text" placeholder="Buscar"/>
+        </div>
+        <!-- Tarjetas -->
+        <div class="grid grid-cols-1 gap-x-6 gap-y-2">
+            <!-- Primer tarjeta -->
+            <div class="bg-[#FFF599] flex shrink-0 hover:bg-[#FFF599] cursor-pointer text-lg text-white font-mono rounded-xl text-center w-100 h-100 mx-5 my-5 pl-3 pr-3 pt-3 pb-3">      
+                <div class="pb-3 rounded-xl w-50 h-50">
+                    <img src="./images/bearbuilders.jpg" alt="">
+                </div>
+                <section>
+                    <div class="box-border rounded-xl text-left pl-2 text-black text-sm">
+                        <p>Bear Builders</p>
+                        <p>16/09/2022</p>
+                        <a href="https://www.google.com/maps/place/Esmeralda+910,+C1057ABL+CABA/@-34.5975375,-58.3806764,17z/data=!3m1!4b1!4m5!3m4!1s0x95bccac9ec16f325:0x53d28e8f563d4908!8m2!3d-34.5975375!4d-58.3784877?shorturl=1">
+                            Ubicación
+                        </a>
+                        <a href="https://www.bear.builders/" target="_blank">Link del evento</a>
+                    </div>
+                </section>
+                <div class="flex-col">
+                </div>
+            </div>
+            <!-- Segunda tarjeta -->
+            <div class="bg-[#FFF599] flex hover:bg-[#FFF599] cursor-pointer text-lg text-white font-mono rounded-xl text-center w-100 h-100 mx-5 my-5 pl-3 pr-3 pt-3 pb-3">      
+                <div class="pb-3 rounded-xl w-50 h-50">
+                    <img src="./images/lemonhype.jpg" alt="">
+                </div>
+                <section>
+                    <div class="box-border rounded-xl text-left pl-2 text-black text-sm">
+                        <p>Lemon Hype</p>
+                        <p>12/08/2022</p>
+                        <a href="https://www.google.com/maps/place/Av.+del+Libertador+3883,+C1425+ABL,+Buenos+Aires/@-34.5711138,-58.424468,17z/data=!3m1!4b1!4m5!3m4!1s0x95bcb59f3abac209:0xd26f9bf189bfdd6c!8m2!3d-34.5711138!4d-58.4222793">
+                            Ubicación
+                        </a>
+                        <a href="https://venti.com.ar/evento/lemon-hype---eth-side-event" target="_blank">Link del evento</a>
+                    </div>
+                </section>
+                <div class="flex-col">
+                </div>
+            </div>
+            <!-- Tercer tarjeta -->
+            <div class="bg-[#FFF599] flex hover:bg-[#FFF599] cursor-pointer text-lg text-white font-mono rounded-xl text-center w-100 h-100 mx-5 my-5 pl-3 pr-3 pt-3 pb-3">      
+                <div class="pb-3 rounded-xl w-50 h-50">
+                    <img src="./images/defi4bitcoin.jpg" alt="">
+                </div>
+                <section>
+                    <div class="box-border rounded-xl text-left pl-2 text-black text-sm">
+                        <p>DescentralizAR 2022</p>
+                        <p>23/09/2022</p>
+                        <a href="https://goo.gl/maps/aeuntRNwYL4crWJV7">
+                            Ubicación
+                        </a>
+                    </div>
+                </section>
+                <div class="flex-col">
+                </div>
+            </div>
+        </div>
+
+<!--
+        <script>
+            var map = L.map('map').setView([-34.5975331,-58.3806764], 15);
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+            L.marker([-34.5975331,-58.3806764]).addTo(map);
+        </script>-->
+</body>
+</html>
